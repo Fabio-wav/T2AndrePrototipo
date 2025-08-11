@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solicitar Serviço - Pet Feeding</title>
-  <link rel="stylesheet" href="styles/solicitar.css">
+  <link rel="stylesheet" href="styles/solicitar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Navbar Global -->
+  <nav class="navbar">
+    <a href="home.html">🏠 Início</a>
+    <a href="meus-pets.html">🐶 Meus Pets</a>
+    <a href="solicitar.html">📅 Solicitar</a>
+    <a href="#">👤 Perfil</a>
+  </nav>
+
   <div class="container">
     <h1 class="logo">🐾 Pet Feeding</h1>
     <h2>Solicitar Hospedagem</h2>
+
     <div class="card">
-      <select>
-        <option>Selecione o pet</option>
+      <label for="pet">Selecione o Pet</label>
+      <select id="pet">
+        <option value="">-- Escolha um pet --</option>
         <option>Thor</option>
         <option>Mia</option>
       </select>
-      <input type="date" placeholder="Data início" />
-      <input type="date" placeholder="Data fim" />
-      <input type="text" placeholder="Instruções especiais" />
+
+      <label for="data-inicio">Data de Início</label>
+      <input type="date" id="data-inicio" />
+
+      <label for="data-fim">Data de Término</label>
+      <input type="date" id="data-fim" />
+
+      <label for="instrucoes">Instruções Especiais</label>
+      <input type="text" id="instrucoes" placeholder="Ex: Alimentar às 8h e 18h" />
+
       <a href="cuidador.html"><button class="btn-primary">Buscar Cuidadores</button></a>
     </div>
   </div>

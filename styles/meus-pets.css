@@ -4,6 +4,24 @@ body {
   padding: 1.5rem;
 }
 
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
 .logo {
   text-align: center;
   font-size: 1.8rem;
@@ -37,6 +55,31 @@ input {
   border-radius: 0.5rem;
 }
 
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.pet-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.crud-icons i {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: #3b82f6;
+  transition: color 0.2s;
+}
+
+.crud-icons i:hover {
+  color: #1e40af;
+}
+
 .btn-primary {
   width: 100%;
   padding: 0.8rem;
@@ -51,4 +94,3 @@ input {
 .btn-primary:hover {
   background-color: #059669;
 }
-

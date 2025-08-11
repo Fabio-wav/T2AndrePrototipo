@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meus Pets - Pet Feeding</title>
-  <link rel="stylesheet" href="styles/meus-pets.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Pets - Pet Feeding</title>
+    <link rel="stylesheet" href="styles/meus-pets.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
-  <div class="container">
-    <h1 class="logo">🐾 Pet Feeding</h1>
-    <h2>Meus Pets</h2>
-    <div class="card">
-      <p><strong>Thor</strong> (Cão - Border Collie)</p>
-      <p><strong>Mia</strong> (Gato - SRD)</p>
+    
+    <nav class="navbar">
+        <a href="home.html">🏠 Início</a>
+        <a href="meus-pets.html">🐶 Meus Pets</a>
+        <a href="solicitar.html">📅 Solicitar</a>
+        <a href="#">👤 Perfil</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="logo">🐾 Pet Feeding</h1>
+        <h2>Meus Pets</h2>
+
+        
+        <div class="card">
+            <div class="pet-item">
+                <div class="pet-info">
+                    <p><strong>Thor</strong> (Cão - Border Collie)</p>
+                </div>
+                <div class="crud-icons">
+                    <i class="fas fa-eye" title="Visualizar"></i>
+                    <i class="fas fa-pen" title="Editar"></i>
+                    <i class="fas fa-trash" title="Excluir"></i>
+                </div>
+            </div>
+
+            <div class="pet-item">
+                <div class="pet-info">
+                    <p><strong>Mia</strong> (Gato - SRD)</p>
+                </div>
+                <div class="crud-icons">
+                    <i class="fas fa-eye" title="Visualizar"></i>
+                    <i class="fas fa-pen" title="Editar"></i>
+                    <i class="fas fa-trash" title="Excluir"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Formulário de adição -->
+        <div class="card">
+            <h3>Adicionar Novo Pet</h3>
+
+            <label for="nome">Nome do Pet</label>
+            <input id="nome" type="text" placeholder="Ex: Thor" />
+
+            <label for="especie">Espécie</label>
+            <input id="especie" type="text" placeholder="(Cão, Gato...)" />
+
+            <label for="raca">Raça</label>
+            <input id="raca" type="text" placeholder="Ex: Border Collie" />
+
+            <label for="idade">Idade</label>
+            <input id="idade" type="text" placeholder="Ex: 4 anos" />
+
+            <label for="necessidades">Necessidades Especiais</label>
+            <input id="necessidades" type="text" placeholder="(opcional)" />
+
+            <button class="btn-primary">Salvar Pet</button>
+        </div>
     </div>
-    <div class="card">
-      <h3>Adicionar Novo Pet</h3>
-      <input type="text" placeholder="Nome do Pet" />
-      <input type="text" placeholder="Espécie (Cão, Gato...)" />
-      <input type="text" placeholder="Raça" />
-      <input type="text" placeholder="Idade" />
-      <input type="text" placeholder="Necessidades Especiais (opcional)" />
-      <button class="btn-primary">Salvar Pet</button>
-    </div>
-  </div>
 </body>
+
 </html>

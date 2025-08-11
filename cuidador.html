@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuidador - Pet Feeding</title>
-  <link rel="stylesheet" href="styles/cuidador.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuidadores Disponíveis - Pet Feeding</title>
+  <link rel="stylesheet" href="styles/cuidador.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Navbar Global -->
+  <nav class="navbar">
+    <a href="home.html">🏠 Início</a>
+    <a href="meus-pets.html">🐶 Meus Pets</a>
+    <a href="solicitar.html">📅 Solicitar</a>
+    <a href="#">👤 Perfil</a>
+  </nav>
+
   <div class="container">
     <h1 class="logo">🐾 Pet Feeding</h1>
-    <div class="card">
-      <h2>Ricardo, o Entusiasta Animal</h2>
-      <p><strong>Experiência:</strong> 3 anos com cães e gatos</p>
-      <p><strong>Nota:</strong> ⭐⭐⭐⭐☆ (4.8)</p>
-      <p><strong>Serviços:</strong> Hospedagem, Pet Feeding, Passeios</p>
-      <p><strong>Disponibilidade:</strong> Seg-Sex, 8h-18h</p>
-      <button class="btn-primary">Solicitar Hospedagem</button>
+    <h2>Cuidadores Disponíveis</h2>
+
+    <div class="grid">
+      <!-- Cuidador 1 -->
+      <div class="card">
+        <h3>Ricardo, o Entusiasta Animal</h3>
+        <ul>
+          <li><i class="fas fa-paw"></i> 3 anos com cães e gatos</li>
+          <li><i class="fas fa-star"></i> ⭐⭐⭐⭐☆ (4.8)</li>
+          <li><i class="fas fa-briefcase"></i> Hospedagem, Pet Feeding, Passeios</li>
+          <li><i class="fas fa-clock"></i> Seg-Sex, 8h às 18h</li>
+        </ul>
+        <button class="btn-primary">Solicitar Hospedagem</button>
+      </div>
+
+      <!-- Cuidador 2 -->
+      <div class="card">
+        <h3>Ana, Amiga dos Felinos</h3>
+        <ul>
+          <li><i class="fas fa-paw"></i> 5 anos com gatos e pets idosos</li>
+          <li><i class="fas fa-star"></i> ⭐⭐⭐⭐⭐ (5.0)</li>
+          <li><i class="fas fa-briefcase"></i> Pet Feeding, Visitas Diárias</li>
+          <li><i class="fas fa-clock"></i> Todos os dias, 9h às 20h</li>
+        </ul>
+        <button class="btn-primary">Solicitar Pet Feeding</button>
+      </div>
     </div>
   </div>
 </body>
