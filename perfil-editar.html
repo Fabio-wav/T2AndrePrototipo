@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editar Perfil - Pet Feeding</title>
+  <link rel="stylesheet" href="styles/perfil-editar.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="home.html">🏠 Início</a>
+    <a href="meus-pets.html">🐶 Meus Pets</a>
+    <a href="solicitar.html">📅 Solicitar</a>
+    <a href="historico.html">📜 Histórico</a>
+    <a href="perfil.html">👤 Perfil</a>
+  </nav>
+
+  <div class="container">
+    <h1 class="logo">🐾 Pet Feeding</h1>
+    <h2>Editar Perfil</h2>
+
+    <form class="profile-form" enctype="multipart/form-data">
+      
+      <label for="foto">Foto do Perfil</label>
+      <div class="photo-upload">
+        <img id="preview" src="https://via.placeholder.com/120" />
+        <input type="file" id="foto" name="foto" accept="image/*" />
+      </div>
+
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" value="Clara Souza" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="clara.souza@email.com" />
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" value="(11) 91234-5678" />
+
+      <label for="endereco">Endereço</label>
+      <input type="text" id="endereco" name="endereco" value="Rua das Flores, 123 - São Paulo, SP" />
+
+      <button type="submit" class="btn-primary">Salvar Alterações</button>
+    </form>
+  </div>
+
+  <script>
+    const fotoInput = document.getElementById('foto');
+    const previewImg = document.getElementById('preview');
+
+    fotoInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          previewImg.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      } else {
+        previewImg.src = 'https://via.placeholder.com/120';
+      }
+    });
+  </script>
+</body>
+</html>

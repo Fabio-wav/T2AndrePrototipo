@@ -1,25 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f0f4f8;
-  padding: 1.5rem;
+   margin: 0;
+  padding: 0;
 }
 
 .navbar {
-  background-color: white;
+  background-color: #fff;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-around;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .navbar a {
   text-decoration: none;
   color: #3b82f6;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .logo {
@@ -37,10 +42,13 @@ h2 {
 .card {
   background: white;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 1rem auto;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  max-width: 600px;
+  width: 100%;
 }
+
 
 .card h3 {
   margin-bottom: 1rem;
@@ -66,14 +74,24 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.8rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pet-info p {
+  margin: 0;
+}
+
+.crud-icons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .crud-icons i {
-  margin-left: 0.5rem;
+  font-size: 1.1rem;
   cursor: pointer;
   color: #3b82f6;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .crud-icons i:hover {
