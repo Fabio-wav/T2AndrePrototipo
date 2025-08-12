@@ -1,0 +1,73 @@
+/* Ícone do menu hamburguer */
+.hamburger-icon {
+  display: none;
+  font-size: 2.2rem;   /* maior */
+  cursor: pointer;
+  color: #3b82f6;
+  user-select: none;
+  margin-right: auto;  /* alinha à esquerda */
+}
+
+/* Overlay escuro (fundo) */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+/* Menu lateral (off-canvas) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background: white;
+  padding: 3rem 2rem; /* mais espaço interno */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  gap: 1.5rem; /* espaçamento maior entre os links */
+}
+
+/* Links no menu mobile estilo app: maiores, blocos, com padding */
+.mobile-menu a {
+  margin-bottom: 0;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #3b82f6;
+  font-size: 1.3rem;  /* maior */
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: #e0e7ff; /* leve fundo azul */
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.mobile-menu a:hover {
+  background-color: #c7d2fe;
+}
+
+/* Mostrar menu e overlay quando ativos */
+.mobile-menu.active,
+.mobile-overlay.active {
+  display: flex;
+}
+
+/* Regras para telas pequenas */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start; /* alinha itens à esquerda */
+  }
+
+  .navbar a {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+}

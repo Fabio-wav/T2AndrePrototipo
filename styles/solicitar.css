@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f0f4f8;
@@ -6,24 +10,20 @@ body {
   align-items: center;
 }
 
-/* Navbar */
 .navbar {
-  background-color: white;
   display: flex;
   justify-content: space-around;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #3b82f6;
-  font-weight: bold;
-}
 
 .logo {
   text-align: center;
@@ -40,9 +40,9 @@ h2 {
 
 .card {
   background: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 auto;
   box-shadow: 0 0 12px rgba(0,0,0,0.05);
   margin-top: 120px;
