@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+
 .navbar {
   display: flex;
   justify-content: space-around;

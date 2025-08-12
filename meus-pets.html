@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar">
         <a href="home.html">🏠 Início</a>
         <a href="meus-pets.html">🐶 Meus Pets</a>
@@ -23,7 +23,7 @@
         <h1 class="logo">🐾 Pet Feeding</h1>
         <h2>Meus Pets</h2>
 
-        
+
         <div class="card">
             <div class="pet-item">
                 <div class="pet-info">
@@ -53,25 +53,26 @@
         <div class="card">
             <h3>Adicionar Novo Pet</h3>
 
-            <label for="nome">Nome do Pet</label>
+            <label for="nome">Nome do Pet <span class="required">*</span></label>
             <input id="nome" type="text" placeholder="Ex: Thor" />
 
-            <label for="especie">Espécie</label>
+            <label for="especie">Espécie <span class="required">*</span></label>
             <input id="especie" type="text" placeholder="(Cão, Gato...)" />
 
-            <label for="raca">Raça</label>
+            <label for="raca">Raça <span class="required">*</span></label>
             <input id="raca" type="text" placeholder="Ex: Border Collie" />
 
-            <label for="idade">Idade</label>
+            <label for="idade">Idade <span class="required">*</span></label>
             <input id="idade" type="text" placeholder="Ex: 4 anos" />
 
             <label for="necessidades">Necessidades Especiais</label>
-            <input id="necessidades" type="text" placeholder="(opcional)" />
+            <input id="necessidades" type="text" placeholder="Ex: Pet alergico a laticinios" />
+
 
             <button class="btn-primary">Salvar Pet</button>
         </div>
     </div>
-  <script src="scripts/navbar-toggle.js"></script>
+    <script src="scripts/navbar-toggle.js"></script>
 </body>
 
 </html>
