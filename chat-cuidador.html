@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat com Cuidador - Pet Feeding</title>
+  <link rel="stylesheet" href="styles/chat-cuidador.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="home.html">🏠 Início</a>
+    <a href="meus-pets.html">🐶 Meus Pets</a>
+    <a href="solicitar.html">📅 Solicitar</a>
+    <a href="perfil.html">👤 Perfil</a>
+  </nav>
+
+  <div class="chat-container">
+    <!-- Seta de voltar -->
+    <div class="voltar">
+      <a href="cuidador.html"><i class="fas fa-arrow-left"></i> Voltar para Cuidadores</a>
+    </div>
+
+    <h2 class="chat-title">Chat com cuidador</h2>
+
+    <div class="chat-box">
+      <div class="message received">
+        <p>Olá! Vi que você tem interesse em hospedagem para seu pet 😊</p>
+      </div>
+      <div class="message sent">
+        <p>Olá camarada! Sim, gostaria de saber se tem vaga no fim de semana.</p>
+      </div>
+    </div>
+
+    <form class="chat-input">
+      <input type="text" placeholder="Digite sua mensagem..." />
+      <button type="submit"><i class="fas fa-paper-plane"></i></button>
+    </form>
+
+    <button id="fechar-btn" class="btn-finalizar">✅ Fechar Negócio</button>
+  </div>
+
+  <script>
+    const form = document.querySelector(".chat-input");
+    const input = form.querySelector("input");
+    const chatBox = document.querySelector(".chat-box");
+    const fecharBtn = document.getElementById("fechar-btn");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (text) {
+        const msg = document.createElement("div");
+        msg.classList.add("message", "sent");
+        msg.innerHTML = `<p>${text}</p>`;
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        input.value = "";
+      }
+    });
+
+    fecharBtn.addEventListener("click", () => {
+      fecharBtn.textContent = "Negócio fechado ✅";
+      fecharBtn.style.backgroundColor = "#047857";
+      fecharBtn.disabled = true;
+    });
+  </script>
+  <script src="scripts/navbar-toggle.js"></script>
+</body>
+</html>
